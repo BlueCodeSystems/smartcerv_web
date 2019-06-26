@@ -1,0 +1,12 @@
+# Visual Studio folders and files #
+###################################
+.vscode/
+*.code-workspace
+
+# Logs and databases #
+######################
+*.log
+.static_storage/
+.media/
+local_settings.py
+*.pyc
