@@ -10,3 +10,29 @@
 .media/
 local_settings.py
 *.pyc
+# Visual Studio folders and files #
+###################################
+.vscode/
+*.code-workspace
+
+# Logs and databases #
+######################
+*.log
+.static_storage/
+.media/
+local_settings.py
+*.pyc
+# Settings folder for a django databases #
+##########################################
+smartcerv_web/settings.py
+
+# private binary folders#
+# folder/** ignores all folders and files recursively
+##########################
+**/__pycache__/
+smartcerv_web/__pycache__/*.pyc
+
+# private folders and files for local user #
+##########################################
+photo_upload/static/data_entry/sources
+*.pyc
