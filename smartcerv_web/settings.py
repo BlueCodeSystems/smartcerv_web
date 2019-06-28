@@ -25,7 +25,7 @@ SECRET_KEY = '3*%v3vrc#5euwcg)5jm-###bb&@(f+ic4l0szyynjziisq+#aq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '172.30.2.161', '34.240.241.171']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '172.30.2.161', '34.240.241.171']
 
 
 # Application definition
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'smartcerv_web.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,3 +119,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

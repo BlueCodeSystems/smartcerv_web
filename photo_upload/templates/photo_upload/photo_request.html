@@ -1,0 +1,5 @@
+<form action="/your-name/" method="post">
+    {% csrf_token %}
+    {{ upload_form.as_ul }}
+    <input type="submit" value="Submit">
+</form>

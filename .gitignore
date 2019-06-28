@@ -25,6 +25,7 @@ local_settings.py
 # Settings folder for a django databases #
 ##########################################
 smartcerv_web/settings.py
+*.sqlite3
 
 # private binary folders#
 # folder/** ignores all folders and files recursively

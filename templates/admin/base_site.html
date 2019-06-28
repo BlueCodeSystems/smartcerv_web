@@ -1,0 +1,17 @@
+{% extends "admin/base.html" %}
+{% block extrastyle %} 
+<style>
+    #header {
+        background-color: #D81B60;
+    }
+
+</style>
+{% endblock %}
+
+{% block title %}{{ title }} | Smartcerv Web Administration{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Smartcerv Web Administration</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

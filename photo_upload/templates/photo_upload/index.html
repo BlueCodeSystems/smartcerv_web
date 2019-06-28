@@ -7,10 +7,18 @@
 
 <body>
     <h1>Smartcerv photo upload</h1>
-    <form>
-        <label>Upload a file</label><br/>
-        <input type="file" name="smartcerv photo" />
+    <!--
+    <form action="/your-name/" method="post">
+        {% csrf_token %}
+        {{ photo_request.html }}
+        <input type="submit" value="Submit">
     </form>
+    -->
     
+    <form action="/your-name/" method="post">
+        {% csrf_token %}
+        {{ photo_request.html }}
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
