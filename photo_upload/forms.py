@@ -1,7 +1,16 @@
-from django.forms import ModelForm
+from django import forms
 from photo_upload.models import SmartcervUpload
 
-class UploadFileForm(ModelForm):
+class SmartcervUploadForm(forms.ModelForm):
+    
+    upload = forms.FileField(
+        widget=forms.ClearableFileInput(
+            attrs={
+                'multiple': True
+            }
+        )
+    )
+
     class Meta:
         model = SmartcervUpload
-        fields = '__all__'
+        fields = ['title']

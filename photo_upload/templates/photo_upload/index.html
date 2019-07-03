@@ -17,7 +17,7 @@
     
     <form action="/your-name/" method="post">
         {% csrf_token %}
-        {{ photo_request.html }}
+        {{ latest_question_list }}
         <input type="submit" value="Submit">
     </form>
 </body>

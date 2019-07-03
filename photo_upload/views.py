@@ -1,10 +1,9 @@
 from django.http import HttpResponse
 from django.template import loader
-from django.shortcuts import render
+from django.views.generic.edit import FormView
+from django.views.generic import ListView
 
-from .models import SmartcervUpload
-
-from .forms import UploadFileForm
+from .forms import SmartcervUploadForm
 
 
 def index(request):
@@ -14,18 +13,19 @@ def index(request):
     }
     return HttpResponse(template.render(context, request))
 
-def get_photo(request):
-    if request.method == 'POST':
-        upload_form = UploadFileForm(request.POST)
+class SmartcervUploadView(FormView):
+    form_class = SmartcervUploadForm
+    template_name = 'photo_upload/change_form.html'
+    success_url = 'photo_upload/change_form.html'
 
+    def post(self, request, *args, **kwargs):
+        form_class = self.get_form_class()
+        form = self.get_form(form_class)
+        files = request.FILES.getlist('upload')
         if form.is_valid():
-            pass    # stub
-            return HttpResponseRedirect('/thanks/')
-    else:
-        upload_form = UploadFileForm()
-    
-    context = {
-        'upload_form': upload_form
-    }
+            for f in files:
+                ...  # Do something with each file.
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
 
-    return render(request, 'photo_upload/photo_request.html', context)

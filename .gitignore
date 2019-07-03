@@ -37,3 +37,6 @@ smartcerv_web/__pycache__/*.pyc
 ##########################################
 photo_upload/static/data_entry/sources
 *.pyc
+
+# ignore migration files. Run makemigrations and migrate on server too
+**/migrations/
