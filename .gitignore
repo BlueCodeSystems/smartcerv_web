@@ -10,18 +10,7 @@
 .media/
 local_settings.py
 *.pyc
-# Visual Studio folders and files #
-###################################
-.vscode/
-*.code-workspace
 
-# Logs and databases #
-######################
-*.log
-.static_storage/
-.media/
-local_settings.py
-*.pyc
 # Settings folder for a django databases #
 ##########################################
 smartcerv_web/settings.py
