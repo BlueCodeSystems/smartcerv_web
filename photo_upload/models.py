@@ -1,7 +1,7 @@
 from django.db import models
 
 class SmartcervUpload(models.Model):
-    title = models.TextField('image title', null=True)
+    title = models.TextField('image title', null=True, unique=True)
     #upload = models.FileField(upload_to = 'smartcerv_patient_pictures', verbose_name = 'choose image')
     time_stamp = models.DateTimeField(auto_now=True)
 
