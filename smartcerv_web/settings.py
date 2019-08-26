@@ -25,7 +25,7 @@ SECRET_KEY = '3*%v3vrc#5euwcg)5jm-###bb&@(f+ic4l0szyynjziisq+#aq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '99.80.97.112', 'www.smartcerv.org']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '99.80.97.112', 'smartcerv.org', 'www.smartcerv.org']
 
 
 # Application definition
